@@ -5,6 +5,15 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ETL", "ETL\ETL.fsproj", "{5F4262F7-646F-492C-B0DD-6D81B7B42F21}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ETL.Tests", "ETL.Tests\ETL.Tests.fsproj", "{E98F9B81-2E3F-44A0-ADC1-B9FFD31A492C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5DCD55BF-FAFE-47AF-B866-BFBFEC25F221}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,10 @@ Global
 		{5F4262F7-646F-492C-B0DD-6D81B7B42F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F4262F7-646F-492C-B0DD-6D81B7B42F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F4262F7-646F-492C-B0DD-6D81B7B42F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98F9B81-2E3F-44A0-ADC1-B9FFD31A492C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98F9B81-2E3F-44A0-ADC1-B9FFD31A492C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98F9B81-2E3F-44A0-ADC1-B9FFD31A492C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98F9B81-2E3F-44A0-ADC1-B9FFD31A492C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
