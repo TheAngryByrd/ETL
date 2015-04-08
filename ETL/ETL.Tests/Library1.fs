@@ -2,10 +2,19 @@
 
 module Tests =
 
-    open FsCheck
+    open Loaders
+    open System.IO
     open Xunit
+    open FsCheck
+    open FsCheck.Xunit
+    open Swensen.Unquote
+    open System.Text
 
-    [<Fact>]
-    let ``Reverse of reverse of a list is the original list``() =
-      let revRevIsOrig (xs:list<int>) = List.rev(List.rev xs) = xs
-      Check.QuickThrowOnFailure revRevIsOrig 
+    [<Property>]
+    let ``Send output via stream`` (input : string) = // Async.StartAsTask <| async {
+        input <> null ==> lazy
+            let memorystream = new MemoryStream()
+            sendViaStream memorystream input |> Async.RunSynchronously
+               
+            let dataInString = memorystream.ToArray() |> Encoding.UTF8.GetString
+            input = dataInString
